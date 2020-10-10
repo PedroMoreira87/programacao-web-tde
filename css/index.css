@@ -3,28 +3,31 @@
 }
 
 .all{
-    background-color: black;
+    background-color: white;
 }
 
-.slogan{
-    position: relative;
-    background-color: yellow;
+.logo{
+    width: 45px;
+}
+
+.logo:hover{
+    cursor: pointer;
+}
+
+.navheader{
     width: 100%;
-    height: 50px;
-    font-family: Candara;
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.slogan div{
+    height: 65px;
     position: absolute;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: 0 auto;
 }
 
-.must-black{
-    height: 55px;
+.backgroundimg{
+    background-image:url("../images/background.png");
+    background-position: center center;
+    width: 100%;
+    height: 700px;
+}
+
+.navbar{
+    margin: 0 auto;
 }
