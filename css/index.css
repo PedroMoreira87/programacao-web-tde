@@ -1,33 +1,61 @@
-*{
-    margin: 0;
+body{
+    margin: 0px;
 }
 
-.all{
-    background-color: white;
+.div-cabecalho{
+    width: 100%;
+    height: 750px;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    position: relative;
 }
 
-.logo{
-    width: 45px;
+.div-menu{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.logo:hover{
+.div-menu button{
+    margin: 5px;
     cursor: pointer;
 }
 
-.navheader{
-    width: 100%;
-    height: 65px;
+.div-pesquisa{
+    width: 60%;
+    height: 60%;
     position: absolute;
-    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-40%);
+    background-color: blue;
 }
 
-.backgroundimg{
-    background-image:url("../images/background.png");
-    background-position: center center;
-    width: 100%;
-    height: 700px;
+.div-dropdown-pesq{
+    width: 220px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 15%;
+    background-color: red;
 }
 
-.navbar{
-    margin: 0 auto;
+.div-logo{
+    left: 10%;
+    margin-top: 0.2%;
+    position: absolute;
+}
+
+.div-logo img{
+    cursor: pointer;
+}
+
+.div-dropmenu{
+    right: 10%;
+    position: absolute;
+}
+
+.div-dropmenu button{
+    cursor: pointer;
 }
