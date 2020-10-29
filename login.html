@@ -15,20 +15,18 @@
 		<img src="images/logo.png" height="150px">
 	</div>
 	<div class="login">
-		<h1>Login</h1>
+		<h1>Cadastro</h1>
 	    <form method="post">
-	    	<input type="text" name="u" placeholder="Usuário" required="required" />
-	        <input type="password" name="p" placeholder="Senha" required="required" />
-	        <button type="submit" class="btn btn-primary btn-block btn-large">Entrar</button>
+	    	<input type="text" name="u" placeholder="Nome" required="required" />
+	    	<input type="password" name="p" placeholder="Data de nascimento" required="required" />
+	    	<input type="password" name="p" placeholder="Usuario" required="required" />
+	    	<input type="password" name="p" placeholder="Senha" required="required" />
+	    	<input type="password" name="p" placeholder="Confirme sua Senha" required="required" />
+	        <input type="password" name="p" placeholder="Email" required="required" />
+	        <input type="password" name="p" placeholder="Confirme seu Email" required="required" />
+	        <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
 	    </form>
 	</div>
-	<div>
-		<p class="div-p">Ainda não é cadastrado ? Clique aqui:</p>
-		<div class="div-cadastro">
-	    <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
-	    </div>
-	</div>
-
 	<script type="text/javascript">
 		sessionStorage.setItem('occupation', 'Software Developer');
 		console.log(sessionStorage.getItem('occupation'));

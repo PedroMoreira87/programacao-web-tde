@@ -27,7 +27,7 @@ body {
 }
 .login { 
 	position: absolute;
-	top: 50%;
+	top: 40%;
 	left: 50%;
 	margin: -150px 0 0 -150px;
 	width:300px;
@@ -58,7 +58,7 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 .div-logo{
 	position: absolute;
-	top: 35%;
+	top: 25%;
 	left: 55.2%;
 	margin: -150px 0 0 -150px;
 
@@ -66,7 +66,7 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 .div-cadastro{
 	position: absolute;
-	top: 79%;
+	top: 69%;
 	left: 50%;
 	margin: -150px 0 0 -150px;
 	width:300px;
@@ -76,7 +76,7 @@ input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgb
 
 .div-p{
 	position: absolute;
-	top: 75%;
+	top: 65%;
 	left: 50.6%;
 	margin: -150px 0 0 -150px;
 	width:300px;
