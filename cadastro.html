@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="css/cadastro.css">
+		<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+		<script type="text/javascript" src="js/cadastro.js"></script>
+	</head>
+	<body>
+	<div class="div-shadow">
+		<img src="images/logo.png" height="150px" class="logo">
+	</div>
+	<div class="cadastro">
+		<h1>Cadastro</h1>
+	    <form method="post">
+	    	<input type="testbox" name="u" placeholder="Nome Completo" required="required" />
+	    	<input name="u" placeholder="Data de nascimento" required="required" />
+	    	<input name="u" placeholder="Usuario" required="required" />
+	    	<input type="password" name="p" placeholder="Senha" required="required" />
+	    	<input type="password" name="p" placeholder="Confirme sua Senha" required="required" />
+	        <input name="u" placeholder="Email" required="required" />
+	        <input name="u" placeholder="Confirme seu Email" required="required" />
+	        <button type="submit" class="btn btn-primary btn-block btn-large">Cadastrar</button>
+	    </form>
+	</div>
+	<script type="text/javascript">
+		sessionStorage.setItem('occupation', 'Software Developer');
+		console.log(sessionStorage.getItem('occupation'));
+	</script>
+	</body>
+</html>
