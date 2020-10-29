@@ -56,14 +56,6 @@ input {
 }
 input:focus { box-shadow: inset 0 -5px 45px rgba(100,100,100,0.4), 0 1px 1px rgba(255,255,255,0.2); }
 
-.div-logo{
-	position: absolute;
-	top: 25%;
-	left: 55.2%;
-	margin: -150px 0 0 -150px;
-
-}
-
 .div-shadow {
     position:absolute;
     max-width:45%;
