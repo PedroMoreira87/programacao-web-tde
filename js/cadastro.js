@@ -20,10 +20,13 @@ function fLocalEventosClick(){
 	//log the list of users for convenience and troubleshooting
 	console.log(userArray);
 
-	document.getElementById('enternew').onclick = function(){verifyNew()};
-	//Verify new user function
+	document.getElementById('enter').onclick = function(){verifyNew()};
+	document.getElementById('enter').addEventListener("click",function (){
+		pagina();
+	})
 }
 
+//Verify new user function
 function verifyNew(){
 
 	var un = document.getElementById('unnew').value;
@@ -117,5 +120,9 @@ function addUser(){
 	document.getElementById('emailnew').value = "";
 	document.getElementById('emailnew1').value = "";
 
-	alert("Seu cadastro foi efetivado com sucesso! Please click the Return to Login link to log in");
+	alert("Seu cadastro foi efetivado com sucesso!");
 };
+
+function pagina(){
+	window.location.assign("login.html");
+}
