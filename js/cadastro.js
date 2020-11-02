@@ -21,9 +21,6 @@ function fLocalEventosClick(){
 	console.log(userArray);
 
 	document.getElementById('enter').onclick = function(){verifyNew()};
-	document.getElementById('enter').addEventListener("click",function (){
-		pagina();
-	})
 }
 
 //Verify new user function
@@ -75,6 +72,9 @@ function verifySecure(){
 			if (email.includes("@")) {
 				if (email == email1) {
 					addUser();
+					document.getElementById('enter').addEventListener("click",function (){
+						pagina();
+					});
 				}else{
 					alert("Por favor, digite o mesmo email");
 					document.getElementById('emailnew').value = "";
