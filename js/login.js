@@ -22,11 +22,14 @@ function fLocalEventosClick(){
 
 	//When the enter button is clicked, call the function to grab the id and pw entered
 	//and check user authentication
-	document.getElementById('enter').onclick = function (){authenticate()};
+	document.getElementById('enter').onclick = function (){
+		authenticate();
+		pagina("index");
+	};
 
-	document.getElementById('cadastro').addEventListener("click",function (){
+	document.getElementById("cadastro").onclick = function (){
 		pagina("cadastro");
-	})
+	};
 }
 
 //Autheticate user function
@@ -52,9 +55,6 @@ function authenticate(){
 				alert("Você está dentro!");
 				document.getElementById('un').value = "";
 				document.getElementById('pw').value = "";
-				document.getElementById('enter').addEventListener("click",function (){
-					pagina("index");
-				});
 				break;
 			}
 			if(i==userArray.length-1 || userArray.length==0){
