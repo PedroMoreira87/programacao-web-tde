@@ -15,59 +15,70 @@ function fLocalEventosClick(){
 	if(JSON.parse(sessionStorage.getItem('passingArray')) != null){
 		for(i=0;i<JSON.parse(sessionStorage.getItem('passingArray')).length;i++){
 		 	userArray.push(JSON.parse(sessionStorage.getItem('passingArray'))[i]);
-		};
-	};
+		}
+	}
 	//log the list of users for convenience and troubleshooting
 	console.log(userArray);
 
-	document.getElementById('enter').onclick = function(){
+	$("#enter").click(function(){
 		verifyNew();
-		pagina();
-	};
+	});
+	// document.getElementById('enter').onclick = function(){
+	// 	verifyNew();
+	// };
+
 }
 
 //Verify new user function
 function verifyNew(){
 
-	var un = document.getElementById('unnew').value;
-	var email = document.getElementById('emailnew').value;
-	var email1 = document.getElementById('emailnew1').value;
+	var un = $("#unnew").val();
+	var email = $("#emailnew").val();
+	// var un = document.getElementById('unnew').value;
+	// var email = document.getElementById('emailnew').value;
 
-
-    //once users have been added to the user array,
+	//once users have been added to the user array,
 	//check the new usernames against the known
 	//if there's a match kick them back
 	//if you get to the end of the array of known users
 	//i will have incremented all the way to the array's length
 	//this tells you there was no match and calls verifySecure
 	//to ensure their password is long enough
+
 	if(userArray.length>0){
 		for(i=0; i<userArray.length; i++){
 			if(un == userArray[i].un){
 				alert("Usuário já cadastrado, por favor, crie um usuário diferente");
-				document.getElementById('unnew').value = "";
+				$("#unnew").val();
+				// document.getElementById('unnew').value = "";
 				break;
 			}else if(email == userArray[i].email){
 				alert("Email já cadastrado, por favor, crie um email diferente");
-				document.getElementById('emailnew').value = "";
-				document.getElementById('emailnew1').value = "";
+				$("#emailnew").val();
+				$("#emailnew1").val();
+				// document.getElementById('emailnew').value = "";
+				// document.getElementById('emailnew1').value = "";
 				break;
-			};
-		};
+			}
+		}
 		if(i == userArray.length){
 			verifySecure();
-		};
+		}
 	}else{
 		verifySecure();
-	};
-};
+	}
+}
 
 function verifySecure(){
 
-	var pw = document.getElementById('pwnew').value;
-	var pw1 = document.getElementById('pwnew1').value;
-	var email = document.getElementById('emailnew').value;
-	var email1 = document.getElementById('emailnew1').value;
+	var pw = $("#pwnew").val();
+	var pw1 = $("#pwnew1").val();
+	var email = $("#emailnew").val();
+	var email1 = $("#emailnew1").val();
+	// var pw = $document.getElementById('pwnew').value;
+	// var pw1 = document.getElementById('pwnew1').value;
+	// var email = document.getElementById('emailnew').value;
+	// var email1 = document.getElementById('emailnew1').value;
 
 	//check that the password entered is 8 characters or more
 	if(pw.length>=8){
@@ -77,52 +88,75 @@ function verifySecure(){
 					addUser();
 				}else{
 					alert("Por favor, digite o mesmo email");
-					document.getElementById('emailnew').value = "";
- 					document.getElementById('emailnew1').value = "";
-				};
+					$("#emailnew").val("");
+					$("#emailnew1").val("");
+					// document.getElementById('emailnew').value = "";
+ 					// document.getElementById('emailnew1').value = "";
+				}
 			}else{
 				alert("Por favor, digite o email corretamente");
-				document.getElementById('emailnew').value = "";
-				document.getElementById('emailnew1').value = "";
-			};
+				$("#emailnew").val("");
+				$("#emailnew1").val("");
+				// document.getElementById('emailnew').value = "";
+				// document.getElementById('emailnew1').value = "";
+			}
 		}else{
 			alert("Por favor, digite a mesma senha");
-			document.getElementById('pwnew').value = "";
-			document.getElementById('pwnew1').value = "";
-		};
+			$("#pwnew").val("");
+			$("#pwnew1").val("");
+			// document.getElementById('pwnew').value = "";
+			// document.getElementById('pwnew1').value = "";
+		}
 	}else{
 		alert("Por favor, crie uma senha com 8 caracteres ou mais");
-		document.getElementById('pwnew').value = "";
-		document.getElementById('pwnew1').value = "";
-	};
-};
+		$("#pwnew").val("");
+		$("#pwnew1").val("");
+		// document.getElementById('pwnew').value = "";
+		// document.getElementById('pwnew1').value = "";
+	}
+}
 
 function addUser(){
 
 	var newUser = {
-		name: document.getElementById('namenew').value,
-		nasc: document.getElementById('nascnew').value,
-		un: document.getElementById('unnew').value,
-		pw: document.getElementById('pwnew').value,
-		pw1: document.getElementById('pwnew1').value,
-		email: document.getElementById('emailnew').value,
-		email1: document.getElementById('emailnew1').value,
+		name: $("#namenew").val(),
+		nasc: $("#nascnew").val(),
+		un: $("#unnew").val(),
+		pw: $("#pwnew").val(),
+		pw1: $("#pwnew1").val(),
+		email: $("#emailnew").val(),
+		email1: $("#emailnew1").val(),
+		// name: document.getElementById('namenew').value,
+		// nasc: document.getElementById('nascnew').value,
+		// un: document.getElementById('unnew').value,
+		// pw: document.getElementById('pwnew').value,
+		// pw1: document.getElementById('pwnew1').value,
+		// email: document.getElementById('emailnew').value,
+		// email1: document.getElementById('emailnew1').value,
 	};
 
 	//add the user to the array, put the array into the shared array, clear the inputs
 	userArray.push(newUser);
 	sessionStorage.setItem('passingArray', JSON.stringify(userArray));
-	document.getElementById('namenew').value = "";
-	document.getElementById('nascnew').value = "";
-	document.getElementById('unnew').value = "";
-	document.getElementById('pwnew').value = "";
-	document.getElementById('pwnew1').value = "";
-	document.getElementById('emailnew').value = "";
-	document.getElementById('emailnew1').value = "";
+	$("#namenew").val("");
+	$("#nascnew").val("");
+	$("#unnew").val("");
+	$("#pwnew").val("");
+	$("#pwnew1").val("");
+	$("#emailnew").val("");
+	$("#emailnew1").val("");
+	// document.getElementById('namenew').value = "";
+	// document.getElementById('nascnew').value = "";
+	// document.getElementById('unnew').value = "";
+	// document.getElementById('pwnew').value = "";
+	// document.getElementById('pwnew1').value = "";
+	// document.getElementById('emailnew').value = "";
+	// document.getElementById('emailnew1').value = "";
 
 	alert("Seu cadastro foi efetivado com sucesso!");
-};
+	pagina();
+}
 
 function pagina(){
-	window.location.assign("login.html");
+	window.location.href="login.html";
 }

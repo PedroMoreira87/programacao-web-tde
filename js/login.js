@@ -22,21 +22,30 @@ function fLocalEventosClick(){
 
 	//When the enter button is clicked, call the function to grab the id and pw entered
 	//and check user authentication
-	document.getElementById('enter').onclick = function (){
+	$("#enter").click(function (){
 		authenticate();
-		pagina("index");
-	};
+		// pagina("index");
+	});
+	// document.getElementById('enter').onclick = function (){
+	// 	authenticate();
+	// 	pagina("index");
+	// };
 
-	document.getElementById("cadastro").onclick = function (){
+	$("#cadastro").click(function (){
 		pagina("cadastro");
-	};
+	});
+	// document.getElementById("cadastro").onclick = function (){
+	// 	pagina("cadastro");
+	// };
 }
 
 //Autheticate user function
 function authenticate(){
 
-	var un = document.getElementById('un').value;
-	var pw = document.getElementById('pw').value;
+	var un = $("#un").val();
+	var pw = $("#pw").val();
+	// var un = document.getElementById('un').value;
+	// var pw = document.getElementById('pw').value;
 
 	//once users have been added to the user array,
 	//check the stored usernames and passwords against the known
@@ -53,8 +62,11 @@ function authenticate(){
 		for(i=0; i<userArray.length; i++){
 			if((un == userArray[i].un) && (pw == userArray[i].pw)){
 				alert("Você está dentro!");
-				document.getElementById('un').value = "";
-				document.getElementById('pw').value = "";
+				$("#un").val("");
+				$("#pw").val("");
+				// document.getElementById('un').value = "";
+				// document.getElementById('pw').value = "";
+				pagina("index");
 				break;
 			}
 			if(i==userArray.length-1 || userArray.length==0){
@@ -64,10 +76,12 @@ function authenticate(){
 		}
 	}else{//enter here on first load when there are no users in the array yet
 		alert("Nenhuma combinação encontrada. Clique no botão \"Cadastrar\" para registrar um novo usuário");
-		document.getElementById('un').value = "";
-		document.getElementById('pw').value = "";
+		$("#un").val("");
+		$("#pw").val("");
+		// document.getElementById('un').value = "";
+		// document.getElementById('pw').value = "";
 	}
-};
+}
 
 //If there is a match in the known usernames clear only the pw field so user
 //doesn't have to retype un
@@ -75,22 +89,24 @@ function authenticate(){
 function troubleshoot(un, pw){
 	for(j=0; j<userArray.length; j++){
 		if(un == userArray[j].un){
-			alert("Senha ruim");
+			alert("Senha incorreta");
 			document.getElementById('pw').value = "";
 			break;
-		};
+		}
 		if(j==userArray.length-1 || userArray.length==0){
 			alert("Nenhuma combinação encontrada. Clique no botão \"Cadastrar\" para registrar um novo usuário");
-			document.getElementById('un').value = "";
-			document.getElementById('pw').value = "";
-		};
-	};
-};
+			$("#un").val("");
+			$("#pw").val("");
+			// document.getElementById('un').value = "";
+			// document.getElementById('pw').value = "";
+		}
+	}
+}
 
 function pagina(pg){
 	if (pg == "index"){
-		window.location.assign("index.html");
+		window.location.href = "index.html";
 	}else if (pg == "cadastro"){
-		window.location.assign("cadastro.html");
+		window.location.href = "cadastro.html";
 	}
 }
