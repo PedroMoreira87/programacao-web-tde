@@ -1,0 +1,83 @@
+body{
+    margin: 0px;
+}
+
+.div-cabecalho{
+    width: 100%;
+    height: 750px;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    position: relative;
+}
+
+.div-menu{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-menu button{
+    margin: 5px;
+    cursor: pointer;
+}
+
+.div-filmes{
+    width: 100%;
+    height: 200%;
+    background-color: gray;
+}
+
+.div-card{
+    width: 200px;
+    height: 400px;
+    background-color: #CCC;
+    float: left;
+    margin: 5px;
+    padding: 5px;
+}
+
+.div-poster{
+    width: 100%;
+    height: 70%;
+    background-color: lightyellow;
+}
+
+.div-poster img{
+    width: 100%;
+    height: 100%;
+}
+
+.div-titulo{
+    text-align: center;
+    width: 100%;
+    background-color: #EEEE;
+}
+
+h3{
+    margin: 0px;
+}
+
+.div-descricao{
+    width: 100%;
+}
+
+.div-rodape {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.bCOMPRAR{
+    width: 100%;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.bCOMPRADO{
+    background-color: green;
+}
