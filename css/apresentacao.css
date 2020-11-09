@@ -1,0 +1,83 @@
+body{
+    margin: 0px;
+}
+
+.div-cabecalho{
+    width: 100%;
+    height: 750px;
+    background-image: url("../images/background.png");
+    background-size: cover;
+    position: relative;
+}
+
+.div-menu{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.div-menu button{
+    margin: 5px;
+    cursor: pointer;
+}
+
+.div-logo{
+    left: 10%;
+    margin-top: 0.2%;
+    position: absolute;
+}
+
+.div-logo img{
+    cursor: pointer;
+}
+
+.div-dropmenu{
+    right: 10%;
+    position: absolute;
+}
+
+.div-dropmenu button{
+    cursor: pointer;
+}
+
+.div-youtube{
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-40%);
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.div-depoimentos{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7%;
+}
+
+.div-p{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+}
