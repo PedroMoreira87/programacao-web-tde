@@ -10,19 +10,19 @@ function fLocalEventosClick(){
     });
 
     $("#comprar").click(function (){
-        pagina("index");
+        pagina("comprar");
     });
 
     $("#vender").click(function (){
-        pagina("index");
+        pagina("vender");
     });
 
     $("#sobreNos").click(function (){
-        pagina("index");
+        pagina("sobreNos");
     });
 
     $("#contato").click(function (){
-        pagina("index");
+        pagina("contato");
     });
 }
 
