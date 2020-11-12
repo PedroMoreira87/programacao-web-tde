@@ -1,9 +1,14 @@
-body{
-    margin: 0px;
+html, body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .div-cabecalho{
-    width: 100%;
+    max-width: 100%;
+    display: block;
     height: 750px;
     background-image: url("../images/background.png");
     background-size: cover;
@@ -25,7 +30,7 @@ body{
 
 .div-logo{
     left: 10%;
-    margin-top: 0.2%;
+    margin-top: 0.3%;
     position: absolute;
 }
 
@@ -82,11 +87,21 @@ body{
     font-size: 20px;
 }
 
-.div-p{
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2%;
+.container{
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 50%);
+    grid-gap: 3px;
+    grid-template-areas:
+            "h h h";
+
+}
+
+.depo1{
+    background: purple;
+    grid-column: 1/2;
+}
+
+.depo2{
+    background: purple;
+    grid-column: 2/3;
 }
