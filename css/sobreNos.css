@@ -8,11 +8,10 @@ html, body {
 
 .container {
     max-width: 100%;
-    min-width: 0;
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 80vh Auto 20vh;
+    grid-template-rows: 80vh Auto 30vh;
     grid-template-areas:
             "h h h"
             "m m m"
@@ -38,14 +37,14 @@ footer {
 
 header > div:nth-child(1) {
     grid-column: 1/2;
-    align-self: self-start;
+    align-self: start;
     justify-self: center;
     margin-top: 1%;
 }
 
 header > div:nth-child(2) {
     grid-column: 2/3;
-    align-self: self-start;
+    align-self: start;
     justify-self: center;
     margin-top: 2%;
 }
@@ -75,7 +74,7 @@ header > div:nth-child(3) {
 
 header > div:nth-child(4) {
     grid-column: 3/4;
-    align-self: self-start;
+    align-self: start;
     justify-self: center;
     margin-top: 4%;
 }
@@ -90,7 +89,7 @@ main > div:nth-child(1) {
 main > div:nth-child(2) {
     grid-column: 2/3;
     grid-row: 2;
-    justify-self: self-end;
+    justify-self: end;
     margin-top: 8%;
 }
 
@@ -127,12 +126,25 @@ main > div:nth-child(5) {
 
 footer > div:nth-child(1) {
     grid-column: 1/4;
+    grid-row: 1;
+    align-self: start;
+    justify-self: center;
+    margin-top: 5%;
+
+}
+
+footer > div:nth-child(2) {
+    grid-column: 1/4;
+    grid-row: 1;
     align-self: start;
     justify-self: center;
     margin-top: 8%;
 }
 
-footer > div:nth-child(2) {
+footer > div:nth-child(3) {
     grid-column: 3/4;
-    transform: translate(-30%, -338%);
+    grid-row: 1;
+    margin-top: 15%;
+    max-height: 0;
+    transform: translate(-30%,0);
 }
