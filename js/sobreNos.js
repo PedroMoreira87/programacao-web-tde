@@ -13,10 +13,6 @@ function fLocalEventosClick(){
         pagina("comprar");
     });
 
-    $("#vender").click(function (){
-        pagina("vender");
-    });
-
     $("#sobreNos").click(function (){
         pagina("sobreNos");
     });
@@ -24,18 +20,22 @@ function fLocalEventosClick(){
     $("#contato").click(function (){
         pagina("contato");
     });
+
+    $("#login").click(function (){
+        pagina("login");
+    });
 }
 
 function pagina(pg){
     if (pg == "index"){
         window.location.href = "index.html";
     }else if (pg == "comprar"){
-        window.location.href = "comprar.html";
-    }else if (pg == "vender"){
-        window.location.href = "vender.html";
+        window.location.href = "vendas.html";
     }else if (pg == "sobreNos"){
         window.location.href = "sobreNos.html";
     }else if (pg == "contato"){
         window.location.href = "contato.html";
+    }else if (pg == "login") {
+        window.location.href = "login.html";
     }
 }
