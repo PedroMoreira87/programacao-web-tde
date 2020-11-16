@@ -99,17 +99,26 @@ $(document).ready(function (){
     fLocalCarros();
 
     $("body").on("click","#btn-comprar",function (){
-        var father = $(this).parents(".div-cardsVeiculos").index();
-        var carro = carros[father];
-        carrinho.push(carro);
-        localStorage.setItem("car",JSON.stringify(carrinho));
-        alert("Veiculo adicionado ao carrinho!");
+        if (!(localStorage.hasOwnProperty("usuario-logado"))){
+            alert("Você precisa estar logado para fazer compras!");
+            pagina("cadLog");
+        }else{
+            var father = $(this).parents(".div-cardsVeiculos").index();
+            var carro = carros[father];
+            carrinho.push(carro);
+            localStorage.setItem("car",JSON.stringify(carrinho));
+            alert("Veiculo adicionado ao carrinho!");
+        }
     });
 
     $("#btn-carrinho").click(function (){
-       window.location.href = "carrinho.html";
+       if (!(localStorage.hasOwnProperty("usuario-logado"))){
+           alert("Você precisa estar logado para fazer compras!");
+           pagina("cadLog");
+       }else{
+           window.location.href = "carrinho.html";
+       }
     });
-
 });
 
 function fLocalCarros(){
@@ -166,5 +175,7 @@ function pagina(pg){
         window.location.href = "sobreNos.html";
     }else if (pg == "contato"){
         window.location.href = "contato.html";
+    }else if (pg == "cadLog"){
+        window.location.href = "cadLog.html";
     }
 }
