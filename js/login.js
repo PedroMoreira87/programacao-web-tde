@@ -1,51 +1,22 @@
 //Define an array to hold users as they're added in the new registration page
-var userArray = [];
+var userArray = JSON.parse(localStorage["usuarios"])
 
 $(document).ready(function(){ //serve para rodar a página toda para depois rodar a função
 
-	fLocalEventosClick();
-
-});
-
-function fLocalEventosClick(){
-
-	//On first load, skip this step (null check)
-	//But when returning to the main page after adding users, get all the added users
-	//out of the array passed between the pages and into the working userArray
-	if(JSON.parse(localStorage.getItem('passingArray')) != null){
-		for(i=0;i<JSON.parse(localStorage.getItem('passingArray')).length;i++){
-			userArray.push(JSON.parse(localStorage.getItem('passingArray'))[i]);
-		};
-	};
-	//log the list of users for convenience and troubleshooting
-	console.log(userArray);
-
-	//When the enter button is clicked, call the function to grab the id and pw entered
-	//and check user authentication
-	$("#enter").click(function (){
+	$("#enter").click(function() {
 		authenticate();
-		// pagina("index");
 	});
-	// document.getElementById('enter').onclick = function (){
-	// 	authenticate();
-	// 	pagina("index");
-	// };
 
-	$("#cadastro").click(function (){
+	$("#cadastro").click(function() {
 		pagina("cadastro");
 	});
-	// document.getElementById("cadastro").onclick = function (){
-	// 	pagina("cadastro");
-	// };
-}
+});
 
 //Autheticate user function
 function authenticate(){
 
 	var un = $("#un").val();
 	var pw = $("#pw").val();
-	// var un = document.getElementById('un').value;
-	// var pw = document.getElementById('pw').value;
 
 	//once users have been added to the user array,
 	//check the stored usernames and passwords against the known
@@ -78,8 +49,6 @@ function authenticate(){
 		alert("Nenhuma combinação encontrada. Clique no botão \"Cadastrar\" para registrar um novo usuário");
 		$("#un").val("");
 		$("#pw").val("");
-		// document.getElementById('un').value = "";
-		// document.getElementById('pw').value = "";
 	}
 }
 
@@ -97,8 +66,6 @@ function troubleshoot(un, pw){
 			alert("Nenhuma combinação encontrada. Clique no botão \"Cadastrar\" para registrar um novo usuário");
 			$("#un").val("");
 			$("#pw").val("");
-			// document.getElementById('un').value = "";
-			// document.getElementById('pw').value = "";
 		}
 	}
 }
