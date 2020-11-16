@@ -35,8 +35,7 @@ function authenticate(){
 				alert("Você está dentro!");
 				$("#un").val("");
 				$("#pw").val("");
-				// document.getElementById('un').value = "";
-				// document.getElementById('pw').value = "";
+				localStorage.setItem("usuario-logado", JSON.stringify(userArray[i]))
 				pagina("index");
 				break;
 			}
