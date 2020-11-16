@@ -12,9 +12,9 @@ function fLocalEventosClick(){
 	//On first load, skip this step (null check)
 	//But when returning to the main page after adding users, get all the added users
 	//out of the array passed between the pages and into the working userArray
-	if(JSON.parse(sessionStorage.getItem('passingArray')) != null){
-		for(i=0;i<JSON.parse(sessionStorage.getItem('passingArray')).length;i++){
-		 	userArray.push(JSON.parse(sessionStorage.getItem('passingArray'))[i]);
+	if(JSON.parse(localStorage.getItem('passingArray')) != null){
+		for(i=0;i<JSON.parse(localStorage.getItem('passingArray')).length;i++){
+		 	userArray.push(JSON.parse(localStorage.getItem('passingArray'))[i]);
 		}
 	}
 	//log the list of users for convenience and troubleshooting
@@ -137,7 +137,7 @@ function addUser(){
 
 	//add the user to the array, put the array into the shared array, clear the inputs
 	userArray.push(newUser);
-	sessionStorage.setItem('passingArray', JSON.stringify(userArray));
+	localStorage.setItem('passingArray', JSON.stringify(userArray));
 	$("#namenew").val("");
 	$("#nascnew").val("");
 	$("#unnew").val("");
