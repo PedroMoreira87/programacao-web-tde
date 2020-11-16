@@ -69,3 +69,44 @@ body{
 .div-btnComprar{
     margin-top: 3%;
 }
+
+.container {
+    max-width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 30vh;
+    grid-template-areas:
+            "h h h"
+            "m m m"
+            "f f f";
+}
+
+footer {
+    grid-area: f;
+}
+
+footer > div:nth-child(1) {
+    grid-column: 1/4;
+    grid-row: 1;
+    align-self: start;
+    justify-self: center;
+    margin-top: 5%;
+
+}
+
+footer > div:nth-child(2) {
+    grid-column: 1/4;
+    grid-row: 1;
+    align-self: start;
+    justify-self: center;
+    margin-top: 8%;
+}
+
+footer > div:nth-child(3) {
+    grid-column: 3/4;
+    grid-row: 1;
+    margin-top: 15%;
+    max-height: 0;
+    transform: translate(-30%,0);
+}

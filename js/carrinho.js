@@ -1,5 +1,7 @@
 $(document).ready(function (){
+    fLocalEventosClick();
     fLocalCarros();
+
 });
 
 function fLocalCarros(){
@@ -28,4 +30,34 @@ function fLocalCarros(){
 
         $(".div-carrinho").append(conteudo);
     };
+}
+
+function fLocalEventosClick(){
+    $("#home").click(function (){
+        pagina("index");
+    });
+
+    $("#comprar").click(function (){
+        pagina("comprar");
+    });
+
+    $("#sobreNos").click(function (){
+        pagina("sobreNos");
+    });
+
+    $("#contato").click(function (){
+        pagina("contato");
+    });
+}
+
+function pagina(pg){
+    if (pg == "index"){
+        window.location.href = "index.html";
+    }else if (pg == "comprar"){
+        window.location.href = "vendas.html";
+    }else if (pg == "sobreNos"){
+        window.location.href = "sobreNos.html";
+    }else if (pg == "contato"){
+        window.location.href = "contato.html";
+    }
 }
