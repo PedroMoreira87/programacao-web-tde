@@ -3,6 +3,9 @@ $(document).ready(function (){
 });
 
 function fLocalEventosClick(){
+    $("#index").click(function (){
+        pagina("index");
+    });
     $("#comprar").click(function (){
         pagina("comprar");
     });
@@ -21,7 +24,9 @@ function fLocalEventosClick(){
 }
 
 function pagina(pg){
-    if (pg == "comprar"){
+    if (pg == "index") {
+        window.location.href = "index.html";
+    }else if (pg == "comprar"){
         window.location.href = "pages/vendas.html";
     }else if (pg == "sobreNos"){
         window.location.href = "pages/sobreNos.html";
