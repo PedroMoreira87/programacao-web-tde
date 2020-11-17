@@ -39,7 +39,7 @@ header > div:nth-child(1) {
     grid-column: 1/2;
     align-self: start;
     justify-self: center;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 header > div:nth-child(2) {
