@@ -1,67 +1,10 @@
-body{
-    margin: 0px;
-}
 
-.div-cabecalho{
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     width: 100%;
-    height: 750px;
-    background-image: url("../images/background.png");
-    background-size: cover;
-    position: relative;
-}
-
-.div-menu{
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.div-menu button{
-    margin: 5px;
-    cursor: pointer;
-}
-
-.div-pesquisa{
-    width: 60%;
-    height: 60%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-40%);
-    background: rgba(0, 0, 0, 0.2);
-}
-
-.div-dropdown-pesq{
-    width: 220px;
-    height: 40px;
-    margin: 0 auto;
-    margin-top: 15%;
-}
-
-.selectpicker option{
-    border: none;
-    outline: none;
-}
-
-.div-logo{
-    left: 10%;
-    margin-top: 0.2%;
-    position: absolute;
-}
-
-.div-logo img{
-    cursor: pointer;
-}
-
-.div-dropmenu{
-    right: 10%;
-    position: absolute;
-}
-
-.div-dropmenu button{
-    cursor: pointer;
+    height: 100%;
 }
 
 .container {
@@ -69,15 +12,90 @@ body{
     padding: 0;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 30vh;
+    grid-template-rows: 80vh 50vh 30vh;
     grid-template-areas:
             "h h h"
             "m m m"
             "f f f";
 }
 
+header {
+    background-image: url("../images/background.png");
+    grid-area: h;
+}
+
+main {
+    grid-area: m;
+}
+
 footer {
     grid-area: f;
+}
+
+header > div:nth-child(1) {
+    grid-column: 1/2;
+    align-self: start;
+    justify-self: center;
+    margin-top: 1%;
+}
+
+header > div:nth-child(2) {
+    grid-column: 2/3;
+    align-self: start;
+    justify-self: center;
+    margin-top: 2%;
+}
+
+header > div:nth-child(3) {
+    grid-column: 2/3;
+    position: absolute;
+    top: 22%;
+    left: 12.5%;
+    color: red;
+    text-shadow: 0 0 3px #FF0000, 0 0 5px black;
+}
+
+header > div:nth-child(4) {
+    grid-column: 3/4;
+    align-self: start;
+    justify-self: center;
+    margin-top: 4%;
+}
+
+main > div:nth-child(1) {
+    grid-column: 1/4;
+    width: 60%;
+    height: 70%;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,10%);
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.depoTitulo {
+    margin-bottom: -1%;
+}
+
+.depoText {
+    padding-left: 11%;
+}
+
+.depoAss {
+    text-align: end;
+    padding-right: 2%;
 }
 
 footer > div:nth-child(1) {
