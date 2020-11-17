@@ -1,90 +1,90 @@
 var carros = [{
-    foto: "carros/2008_1.jpg",
+    foto: "../carros/2008_1.jpg",
     titulo: "PEUGEOT 2008 (AUTOMATICO)",
     am: "ANO: 2018 / MODELO: 2018",
     preco: 79000.00
 },{
-    foto: "carros/Argo_1.jpg",
+    foto: "../carros/Argo_1.jpg",
     titulo: "FIAT ARGO (MANUAL)",
     am: "ANO: 2016 / MODELO: 2017",
     preco: 59000.00
 },{
-    foto: "carros/C4_1.jpg",
+    foto: "../carros/C4_1.jpg",
     titulo: "CITROEN C4 CACTUS (AUTOMATICO)",
     am: "ANO 2018 / MODELO: 2018",
     preco: 62000.00
 },{
-    foto: "carros/Captur_1.jpg",
+    foto: "../carros/Captur_1.jpg",
     titulo: "RENAULT CAPTUR (AUTOMATICO)",
     am: "ANO: 2016 / MODELO: 2016",
     preco: 55000.00
 },{
-    foto: "carros/Compass_1.jpg",
+    foto: "../carros/Compass_1.jpg",
     titulo: "JEEP COMPASS (AUTOMATICO)",
     am: "ANO: 2018 / MODELO: 2019",
     preco: 78000.00
 },{
-    foto: "carros/Corolla_1.jpg",
+    foto: "../carros/Corolla_1.jpg",
     titulo: "TOYOTA COROLLA (AUTOMATICO)",
     am: "ANO: 2017 / MODELO: 2017",
     preco: 71540.00
 },{
-    foto: "carros/Duster_1.jpg",
+    foto: "../carros/Duster_1.jpg",
     titulo: "RENAULT DUSTER (MANUAL)",
     am: "ANO: 2016 / MODELO: 2016",
     preco: 42000.00
 },{
-    foto: "carros/Fiorino_1.jpg",
+    foto: "../carros/Fiorino_1.jpg",
     titulo: "FIAT FIORINO (MANUAL)",
     am: "ANO: 2012 / MODELO: 2012",
     preco: 29000.00
 },{
-    foto: "carros/Jetta_1.jpg",
+    foto: "../carros/Jetta_1.jpg",
     titulo: "VOLKSWAGEN JETTA (AUTOMATICO)",
     am: "ANO: 2019 / MODELO: 2019",
     preco: 89000.00
 },{
-    foto: "carros/Kwid_1.jpg",
+    foto: "../carros/Kwid_1.jpg",
     titulo: "RENAULT KWID (MANUAL)",
     am: "ANO: 2016 / MODELO: 2016",
     preco: 38000.00
 },{
-    foto: "carros/Mobi_1.jpg",
+    foto: "../carros/Mobi_1.jpg",
     titulo: "FIAT MOBI (AUTOMATICO)",
     am: "ANO: 2016 / MODELO: 2017",
     preco: 39000.00
 },{
-    foto: "carros/Onix_1.jpg",
+    foto: "../carros/Onix_1.jpg",
     titulo: "CHEVROLET ONIX (MANUAL)",
     am: "ANO: 2015 / MODELO: 2015",
     preco: 29000.00
 },{
-    foto: "carros/Polo_1.jpg",
+    foto: "../carros/Polo_1.jpg",
     titulo: "VOLKSWAGEN POLO (AUTOMATICO)",
     am: "ANO: 2017 / MODELO: 2017",
     preco: 41780.00
 },{
-    foto: "carros/Sandero_1.jpg",
+    foto: "../carros/Sandero_1.jpg",
     titulo: "RENAULT SANDERO (MANUAL)",
     am: "ANO: 2016 / MODELO: 2017",
     preco: 33000.00
 },{
-    foto: "carros/Saveiro_1.jpg",
+    foto: "../carros/Saveiro_1.jpg",
     titulo: "VOLKSWAGEN SAVEIRO (MANUAL)",
     am: "ANO: 2012 / MODELO: 2013",
     preco: 39000.00
 },{
-    foto: "carros/Toro_1.jpg",
+    foto: "../carros/Toro_1.jpg",
     titulo: "FIAT TORO (AUTOMATICO)",
     am: "ANO: 2017 / MODELO: 2017",
     preco: 68000.00
 },{
-    foto: "carros/Virtus_1.jpg",
+    foto: "../carros/Virtus_1.jpg",
     titulo: "VOLKSWAGEN VIRTUS (AUTOMATICO)",
     am: "ANO: 2019 / MODELO: 2019",
     preco: 48000.00
 },{
-    foto: "carros/Voyage_1.jpg",
+    foto: "../carros/Voyage_1.jpg",
     titulo: "VOLKSWAGEN VOYAGE (MANUAL)",
     am: "ANO: 2015 / MODELO: 2015",
     preco: 29000.00
@@ -101,7 +101,7 @@ $(document).ready(function (){
     $("body").on("click","#btn-comprar",function (){
         if (!(localStorage.hasOwnProperty("usuario-logado"))){
             alert("Você precisa estar logado para fazer compras!");
-            pagina("cadLog");
+            pagina("cadastro");
         }else{
             var father = $(this).parents(".div-cardsVeiculos").index();
             var carro = carros[father];
@@ -114,7 +114,7 @@ $(document).ready(function (){
     $("#btn-carrinho").click(function (){
        if (!(localStorage.hasOwnProperty("usuario-logado"))){
            alert("Você precisa estar logado para fazer compras!");
-           pagina("cadLog");
+           pagina("cadastro");
        }else{
            window.location.href = "carrinho.html";
        }
@@ -149,7 +149,7 @@ function fLocalCarros(){
 }
 
 function fLocalEventosClick(){
-    $("#home").click(function (){
+    $("#index").click(function (){
         pagina("index");
     });
 
@@ -172,15 +172,15 @@ function fLocalEventosClick(){
 
 function pagina(pg){
     if (pg == "index"){
-        window.location.href = "index.html";
+        window.location.href = "../index.html";
     }else if (pg == "comprar"){
         window.location.href = "vendas.html";
     }else if (pg == "sobreNos"){
         window.location.href = "sobreNos.html";
     }else if (pg == "contato"){
         window.location.href = "contato.html";
-    }else if (pg == "cadLog"){
-        window.location.href = "cadLog.html";
+    }else if (pg == "cadastro"){
+        window.location.href = "cadastro.html";
     }else if (pg == "faleConosco"){
         window.location.href = "https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=329a96d0-762b-4028-a7cc-318d5843a789&serviceInstanceID=adf692d8-228d-4152-b98a-06ee52915fa9";
     }

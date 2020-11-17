@@ -45,7 +45,7 @@ function authenticate(){
 			}
 		}
 	}else{//enter here on first load when there are no users in the array yet
-		alert("Nenhuma combinação encontrada. Clique no botão \"Cadastrar\" para registrar um novo usuário");
+		alert("Informações incorretas. Clique no botão \"Cadastrar\" para registrar um novo usuário");
 		$("#un").val("");
 		$("#pw").val("");
 	}
@@ -57,12 +57,13 @@ function authenticate(){
 function troubleshoot(un, pw){
 	for(j=0; j<userArray.length; j++){
 		if(un == userArray[j].un){
-			alert("Senha incorreta");
-			document.getElementById('pw').value = "";
+			alert("Informações incorretas. Clique no botão \"Cadastrar\" para registrar um novo usuário");
+			$("#un").val("");
+			$("#pw").val("");
 			break;
 		}
 		if(j==userArray.length-1 || userArray.length==0){
-			alert("Nenhuma combinação encontrada. Clique no botão \"Cadastrar\" para registrar um novo usuário");
+			alert("Informações incorretas. Clique no botão \"Cadastrar\" para registrar um novo usuário");
 			$("#un").val("");
 			$("#pw").val("");
 		}
@@ -71,7 +72,7 @@ function troubleshoot(un, pw){
 
 function pagina(pg){
 	if (pg == "index"){
-		window.location.href = "index.html";
+		window.location.href = "../index.html";
 	}else if (pg == "cadastro"){
 		window.location.href = "cadastro.html";
 	}

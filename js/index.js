@@ -1,14 +1,8 @@
-$(document).ready(function(){ //serve para rodar a página toda para depois rodar a função
-
+$(document).ready(function (){
     fLocalEventosClick();
-
 });
 
 function fLocalEventosClick(){
-    $("#home").click(function (){
-        pagina("index");
-    });
-
     $("#comprar").click(function (){
         pagina("comprar");
     });
@@ -27,14 +21,12 @@ function fLocalEventosClick(){
 }
 
 function pagina(pg){
-    if (pg == "index"){
-        window.location.href = "../index.html";
-    }else if (pg == "comprar"){
-        window.location.href = "vendas.html";
+    if (pg == "comprar"){
+        window.location.href = "pages/vendas.html";
     }else if (pg == "sobreNos"){
-        window.location.href = "sobreNos.html";
-    }else if (pg == "login") {
-        window.location.href = "login.html";
+        window.location.href = "pages/sobreNos.html";
+    }else if (pg == "login"){
+        window.location.href = "pages/login.html";
     }else if (pg == "faleConosco"){
         window.location.href = "https://web-chat.global.assistant.watson.cloud.ibm.com/preview.html?region=us-south&integrationID=329a96d0-762b-4028-a7cc-318d5843a789&serviceInstanceID=adf692d8-228d-4152-b98a-06ee52915fa9";
     }
