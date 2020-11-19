@@ -1,8 +1,36 @@
-$(document).ready(function(){ //serve para rodar a página toda para depois rodar a função
+var mapa;
 
+$(document).ready(function(){
     fLocalEventosClick();
-
 });
+
+function initMap() {
+
+    var configuracoes = {
+        center: {lat: -25.47212754, lng: -49.25276682},
+        zoom: 13
+    }
+
+    mapa = new google.maps.Map(document.getElementById('map'), configuracoes);
+
+    var marcador = new google.maps.Marker({
+        position: {lat: -25.4517026, lng: -49.2452604},
+        title: "AvTorres",
+        map: mapa
+    });
+
+    var marcador2 = new google.maps.Marker({
+        position: {lat: -25.5019947, lng: -49.2615328},
+        title: "Xaxim",
+        map: mapa
+    });
+
+    var marcador3 = new google.maps.Marker({
+        position: {lat: -25.45212754, lng: -49.25276682},
+        title: "CristoRei",
+        map: mapa
+    });
+}
 
 function fLocalEventosClick(){
     $("#home").click(function (){

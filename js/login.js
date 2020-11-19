@@ -1,4 +1,8 @@
 //Define an array to hold users as they're added in the new registration page
+if (!(localStorage.hasOwnProperty("usuarios"))){
+	localStorage.setItem("usuarios", "[]")
+}
+
 var userArray = JSON.parse(localStorage["usuarios"])
 
 $(document).ready(function(){ //serve para rodar a página toda para depois rodar a função
