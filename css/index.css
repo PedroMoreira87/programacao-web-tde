@@ -84,19 +84,6 @@ main > div:nth-child(1) {
     height: 100%;
 }
 
-.depoTitulo {
-    margin-bottom: -1%;
-}
-
-.depoText {
-    padding-left: 11%;
-}
-
-.depoAss {
-    text-align: end;
-    padding-right: 2%;
-}
-
 footer > div:nth-child(1) {
     display: flex;
     grid-column: 1/4;
